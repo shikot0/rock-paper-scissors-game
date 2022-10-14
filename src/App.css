@@ -1,0 +1,273 @@
+* {
+  font-family: 'Barlow Semi Condensed';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 3% 0 6%;
+  min-height: 100vh;
+  gap: 15vh; 
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+header  {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid hsl(217, 16%, 45%); 
+  border-radius: 12px;
+  padding: 1.3% 2%;
+}
+.score-section {
+  width: 20%;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+  font-weight: 600;
+  color: hsl(229, 64%, 46%);
+  letter-spacing: 2px;
+  font-size: 1.1rem;  
+  cursor: pointer;
+  transition: .3s;
+}
+.score-section:hover {
+  scale: 1.02;
+}
+h1{ 
+  font-size: 3.8rem;
+  line-height: 3.8rem; 
+  font-weight: 700;
+  color: hsl(229, 25%, 31%);
+}
+#choosing-section {
+  background: url(../public/images/bg-pentagon.svg) no-repeat center;
+  height: max-content;
+  position: relative;
+  min-height: 390px;
+}
+.option-button {
+  border: none;
+  border-radius: 100px;
+  width: 130px;
+  height: 130px;
+  cursor: pointer;
+  position: absolute;
+  translate: -50%;
+  border: 1rem solid;
+  transition: .1s;
+}
+#scissors-button:active,#paper-button:active,#rock-button:active,#lizard-button:active,#spock-button:active {
+  translate: -50% 8px;
+  box-shadow: none;
+}
+#scissors-button {
+  top: -5%;
+  left: 50%;
+  background: url(../public/images/icon-scissors.svg) no-repeat center, white;
+  border-color: hsl(40, 84%, 53%);
+  box-shadow: 0 6px 0 hsl(39, 89%, 49%);
+}
+#paper-button {
+  top: 25%;
+  left: 62%;
+  background: url(../public/images/icon-paper.svg) no-repeat center, white;
+  border-color: hsl(230, 89%, 65%);
+  box-shadow: 0 6px 0 hsl(230, 89%, 62%);
+}
+#rock-button {
+  bottom: 0;
+  left: 59%;
+  background: url(../public/images/icon-rock.svg) no-repeat center, white;
+  border-color: hsl(349, 70%, 56%);
+  box-shadow: 0 6px 0 hsl(349, 71%, 52%); 
+}
+#lizard-button {
+  bottom: 0;
+  left: 41%;
+  background: url(../public/images/icon-lizard.svg) no-repeat center, white;
+  border-color: hsl(261, 72%, 63%);
+  box-shadow: 0 6px 0 hsl(261, 73%, 60%);
+}
+#spock-button {
+  top: 25%;
+  left: 38%;
+  background: url(../public/images/icon-spock.svg) no-repeat center, white;
+  border-color: hsl(189, 58%, 57%);
+  box-shadow: 0 6px 0 hsl(189, 59%, 53%);
+} 
+dialog {
+  position: fixed;
+  left: 150vw;
+  top: 50%;
+  translate: -50% -50%;
+  border: none;
+  border-radius: 7px;
+  padding: 2% 2.5%;
+  opacity: 0;
+  transition: .4s;
+  z-index: 10;
+  box-shadow: 0 0 50px black;
+}
+dialog.visible {
+  left: 50%;
+  opacity: 1;
+}
+dialog > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 6%;
+}
+dialog h2 {
+  color: hsl(229, 25%, 31%);
+  font-size: 1.75rem;
+}
+.close-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.open-modal-button {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  background: hsl(237, 49%, 15%);
+  border-radius: 6px;
+  border: 1px solid white;
+  color: white;
+  font-weight: 600; 
+  padding: .5rem 2rem;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 840px) {
+  main {
+    padding: 4% 0 15%;
+  }
+  .option-button {
+    width: 110px;
+    height: 110px;
+    border: 12px solid;
+  }
+  #scissors-button {
+    left: 50%;
+    background: url(../public/images/icon-scissors.svg) no-repeat center, white;
+    background-size: 50%;
+  }
+  #paper-button {
+    top: 22%;
+    left: 71%;
+    background: url(../public/images/icon-paper.svg) no-repeat center, white;
+    background-size: 50%;
+  }
+  #rock-button {
+    left: 65%;
+    background: url(../public/images/icon-rock.svg) no-repeat center, white;
+    background-size: 50%;
+  }
+  #lizard-button {
+    left: 35%;
+    background: url(../public/images/icon-lizard.svg) no-repeat center, white;
+    background-size: 50%;
+  }
+  #spock-button {
+    top: 22%;
+    left: 29%;
+    background: url(../public/images/icon-spock.svg) no-repeat center, white;
+    background-size: 50%;
+  } 
+}
+@media screen and (max-width: 460px) {
+  header {
+    padding: 2%;
+    align-items: center;
+    border-radius: 8px;
+    border: 2px solid hsl(217, 16%, 45%); 
+  }
+  #game-logo-link img {
+    height: 70px;
+  }
+  .score-section {
+    width: 30%;
+    padding: 2%;
+    border-radius: 5px;
+    font-size: .9rem;  
+  }
+  #choosing-section {
+    background-size: 60%;
+  }
+  .option-button {
+    width: 95px;
+    height: 95px;
+    border: 10px solid;
+  }
+  #scissors-button:active,#paper-button:active,#rock-button:active,#lizard-button:active,#spock-button:active {
+    translate: -50% 5px;
+    box-shadow: none;
+  }
+  #scissors-button {
+    top: 3%;
+    left: 50%;
+    box-shadow: 0 4px 0 hsl(39, 89%, 49%);
+  }
+  #paper-button {
+    top: 25%;
+    left: 80%;
+    box-shadow: 0 4px 0 hsl(230, 89%, 62%);
+  }
+  #rock-button {
+    bottom: 8%;
+    left: 66%;
+    box-shadow: 0 4px 0 hsl(349, 71%, 52%);
+  }
+  #lizard-button {
+    bottom: 8%;
+    left: 34%;
+    box-shadow: 0 4px 0 hsl(261, 73%, 60%);
+  }
+  #spock-button {
+    top: 25%;
+    left: 20%;
+    box-shadow: 0 4px 0 hsl(189, 59%, 53%);
+  } 
+  .open-modal-button {
+    right: initital;
+    left: 50%;
+    translate: -50%;
+  }
+  dialog {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10% 2.5%;
+    gap: 10%;
+  }
+  dialog > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+  }
+  dialog img {
+    width: 80%;
+  }
+  .close-button {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    translate: -50% 50%;
+  }
+}

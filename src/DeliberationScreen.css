@@ -1,0 +1,167 @@
+#deliberation-section {
+    display: grid;
+    font-weight: 600;
+    color: white;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    grid-auto-flow: column;
+    grid-template-columns: 40% 20% 40%;
+    justify-items: center;
+}
+.players-choice-div, .computers-choice-div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+    min-height: 360px;
+    position: relative;
+    border-radius: 100%;
+}
+.circular-background {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    background: hsl(237, 49%, 15%);
+    top: 50%;
+    translate: -50% -50%;
+    left: 50%;
+    z-index: 0;
+}
+.won {
+    animation: fade-out 60s linear 2s infinite forwards;
+}
+@keyframes fade-out {
+    0% {
+        background: repeating-radial-gradient(hsla(214, 48%, 35%, 0.1) 40%, hsla(238, 100%, 76%, 0.1) 60%);
+        background-position: center;
+        background-size: 100% 100%;
+    }
+    50% {
+        background-size: 300% 300%;
+        background-position: center;
+    }
+    100% {
+        background-size: 100% 100%;
+        background-position: center;
+    }
+}
+#deliberation-section .option-button { 
+    top: 15%;
+    bottom: initial;
+    left: 50%;
+    right: initial;
+    z-index: 2;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-size: 45%;
+}
+#deliberation-section .computers-choice-div .option-button {
+    animation: grow 0.2s linear 1.5s 1 backwards;
+}
+@keyframes grow {
+    from {
+        opacity: 0;
+        scale: .3;
+    }
+}
+#deliberation-section .option-button:active {
+    translate: -50% 8px;
+    box-shadow: initial;
+}
+.result-div {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 1.5rem;
+    animation: pause .2s linear 2.5s 1 backwards;
+}
+@keyframes pause {
+    from {
+        scale: .2;
+        opacity: 0;
+    }
+}
+.result-div h2 {
+    font-size: 2.7rem;
+}
+.play-again-button {
+    display: inline-block;
+    border: none;
+    background: white;
+    border: 2px solid white;
+    color: hsl(237, 49%, 15%);
+    font-size: 1.05rem;
+    padding: .6rem 2rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .2s;
+}
+.play-again-button:hover {
+    background: transparent;
+    color: white;
+    scale: 1.05;
+}
+
+@media screen and (max-width: 840px) {
+    .players-choice-div, .computers-choice-div {
+        min-height: 280px;
+    }
+    #deliberation-section .option-button {
+        top: 20%;
+        width: 160px;
+        height: 160px;
+    }
+    .circular-background {
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        top: 50%;
+        translate: -50% -50%;
+        left: 50%;
+        z-index: 0;
+    }
+    .result-div h2 {
+        font-size: 1.8rem;
+    }
+    .play-again-button {
+        font-size: 1rem;
+        padding: .5rem 1.5rem;
+    }
+}
+@media screen and (max-width: 460px) {
+    #deliberation-section {
+        font-size: 1rem;
+        letter-spacing: 1.2px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        padding: 0 0 5%;
+    }
+    .players-choice-div, .computers-choice-div{
+        min-height: 205px; 
+    }
+    #deliberation-section .option-button {
+        top: 15%;
+        width: 150px;
+        height: 150px;
+    }
+    .result-div {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+}
