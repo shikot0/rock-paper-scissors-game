@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/rock-paper-game/static/css/main.2d216d74.css",
-    "main.js": "/rock-paper-game/static/js/main.5e475c39.js",
-    "static/media/icon-lizard.svg": "/rock-paper-game/static/media/icon-lizard.0f83914cca1adc9454d1.svg",
-    "static/media/icon-paper.svg": "/rock-paper-game/static/media/icon-paper.8b57a6b108c1b8ae8293.svg",
-    "static/media/icon-spock.svg": "/rock-paper-game/static/media/icon-spock.f4d7eee84cf50913d739.svg",
-    "static/media/icon-scissors.svg": "/rock-paper-game/static/media/icon-scissors.3b1a5d7eb0b2f1fd3e95.svg",
-    "index.html": "/rock-paper-game/index.html",
-    "static/media/icon-rock.svg": "/rock-paper-game/static/media/icon-rock.476e90a9646a87bb3645.svg",
-    "static/media/bg-pentagon.svg": "/rock-paper-game/static/media/bg-pentagon.1ad6d36532b75eb7d82c.svg",
-    "main.2d216d74.css.map": "/rock-paper-game/static/css/main.2d216d74.css.map",
-    "main.5e475c39.js.map": "/rock-paper-game/static/js/main.5e475c39.js.map"
+    "main.css": "/rock-paper-scissors-game/static/css/main.46bfb2e2.css",
+    "main.js": "/rock-paper-scissors-game/static/js/main.5e475c39.js",
+    "static/media/icon-lizard.svg": "/rock-paper-scissors-game/static/media/icon-lizard.0f83914cca1adc9454d1.svg",
+    "static/media/icon-paper.svg": "/rock-paper-scissors-game/static/media/icon-paper.8b57a6b108c1b8ae8293.svg",
+    "static/media/icon-spock.svg": "/rock-paper-scissors-game/static/media/icon-spock.f4d7eee84cf50913d739.svg",
+    "index.html": "/rock-paper-scissors-game/index.html",
+    "static/media/icon-scissors.svg": "/rock-paper-scissors-game/static/media/icon-scissors.3b1a5d7eb0b2f1fd3e95.svg",
+    "static/media/icon-rock.svg": "/rock-paper-scissors-game/static/media/icon-rock.476e90a9646a87bb3645.svg",
+    "static/media/bg-pentagon.svg": "/rock-paper-scissors-game/static/media/bg-pentagon.1ad6d36532b75eb7d82c.svg",
+    "main.46bfb2e2.css.map": "/rock-paper-scissors-game/static/css/main.46bfb2e2.css.map",
+    "main.5e475c39.js.map": "/rock-paper-scissors-game/static/js/main.5e475c39.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d216d74.css",
+    "static/css/main.46bfb2e2.css",
     "static/js/main.5e475c39.js"
   ]
 }
