@@ -1,6 +1,6 @@
 {
   "name": "rock-paper-scissors-with-react",
-  "homepage": "https://shikot0.github.io/rock-paper-scissors-with-react",
+  "homepage": "https://shikot0.github.io/rock-paper-game",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
