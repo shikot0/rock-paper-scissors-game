@@ -17,6 +17,7 @@ function DeliberationScreen({playerChoice, computerChoice, setCurrentScore}) {
                 setResult('YOU WON');
                 setCurrentScore(prevScore => {
                     prevScore++;
+                    localStorage.setItem('savedScore', JSON.stringify(prevScore))
                     return prevScore; 
                 });
             }else if(lost) {
@@ -24,6 +25,7 @@ function DeliberationScreen({playerChoice, computerChoice, setCurrentScore}) {
                 setCurrentScore(prevScore => {
                     if(prevScore > 0) {
                         prevScore--
+                        localStorage.setItem('savedScore', JSON.stringify(prevScore))
                         return prevScore;
                     }else {
                         return 0;

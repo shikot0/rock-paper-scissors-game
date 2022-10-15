@@ -6,7 +6,7 @@ function Header({currentScore}) {
                 <p>SCORE</p>
                 <h1>{currentScore}</h1>
             </div>
-        </header>
+        </header> 
     )
 }
 

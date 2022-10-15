@@ -23,7 +23,10 @@ function App() {
     value: "Spock", 
     isWeakAgainst: ["Lizard", "Paper"]
 }]
-  const [currentScore, setCurrentScore] = useState(0);
+
+  const savedScore = localStorage.getItem('savedScore') ? JSON.parse(localStorage.getItem('savedScore')) : 0;
+
+  const [currentScore, setCurrentScore] = useState(savedScore);
   const [playerChoice, setPlayerChoice] = useState('');
   const [computerChoice, setComputerChoice] = useState('');
   
