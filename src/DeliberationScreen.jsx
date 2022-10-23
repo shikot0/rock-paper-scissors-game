@@ -14,14 +14,14 @@ function DeliberationScreen({playerChoice, computerChoice, setCurrentScore}) {
     useEffect(() => {
         setTimeout(() => {
             if(won) {
-                setResult('YOU WON');
+                setResult('YOU WON!');
                 setCurrentScore(prevScore => {
                     prevScore++;
                     localStorage.setItem('savedScore', JSON.stringify(prevScore))
                     return prevScore; 
                 });
             }else if(lost) {
-                setResult('YOU LOST');
+                setResult('YOU LOST!');
                 setCurrentScore(prevScore => {
                     if(prevScore > 0) {
                         prevScore--
@@ -32,7 +32,7 @@ function DeliberationScreen({playerChoice, computerChoice, setCurrentScore}) {
                     }
                 });
             }else {
-                setResult('IT WAS A TIE');
+                setResult('IT WAS A TIE!');
             }
         }, 2500)
     }, [won, lost, setCurrentScore]); 
