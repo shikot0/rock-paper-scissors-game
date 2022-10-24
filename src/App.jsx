@@ -10,7 +10,7 @@ function App() {
   const options = [{
     value: "Scissors",
     isWeakAgainst: ["Spock", "Rock"]
-  },{
+  },{ 
     value: "Paper",
     isWeakAgainst: ["Scissors", "Lizard"]
   },{
